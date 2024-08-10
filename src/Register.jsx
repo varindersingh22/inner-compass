@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Login.css";
 
 const Register = () => {
   const [user, setUser] = useState({});
@@ -37,48 +38,33 @@ const Register = () => {
 
   return (
     <>
-      <div className="register-title">
-        <h4>Register</h4>
-      </div>
-      <div className="register-form mt-4">
-        <form>
-          <div className="form-row">
-            <div className="form-group col-md-12">
-              <input
-                type="text"
+       <div class="hero-section">
+                <div class="login-main">
+                   <h1>Register</h1>
+                   <h3>Enter your login credentials</h3>
+                    <form>
+                        <label for="first" class="login-lables"> Username: </label>
+                        <input class="login-input" type="text"
                 onKeyUp={(event) => readValue(event, "username")}
-                className="form-control"
-                placeholder="Username"
-              />
-            </div>
-            <div className="form-group col-md-12">
-              <input
-                type="password"
+                placeholder="Username"/>
+             
+                        <label for="password" class="login-lables"> Password:</label>
+                        <input class="login-input" type="password"
                 onKeyUp={(event) => readValue(event, "password")}
-                className="form-control"
-                placeholder="Password"
-              />
-            </div>
-            <div className="form-group col-md-12">
-              <input
-                type="email"
+                placeholder="Password"/>
+
+                      <label for="email" class="login-lables"> Email:</label>
+                        <input class="login-input" type="email"
                 onKeyUp={(event) => readValue(event, "email")}
-                className="form-control"
                 placeholder="Email"
-              />
-            </div>
-          </div>
-          <div className="form-row">
-            <button
-              type="button"
-              className="btn btn-primary btn-block"
-              onClick={registerUser}
-            >
-              Register
-            </button>
-          </div>
-        </form>
-      </div>
+/>
+            
+                        <button type="button" class="submit-btn" onClick={registerUser} >Login</button>
+                    </form>
+
+                    <p class="signup-link">already registered ? <a href="/login">Login to an account</a></p>
+                </div>
+        </div>
     </>
   );
 };

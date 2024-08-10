@@ -1,0 +1,147 @@
+/* Dashboard section */
+.section1 {
+  background: url('images/homebg.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.dashboard-row,.dashboard-row-mental {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dashboard-row{
+  height: 80vh;
+}
+
+/* Intro section */
+.intro-section {
+  text-align: center;
+  background-size: cover;
+  color: white !important;
+  padding: 60px 20px;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.intro-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #284e95;
+}
+
+.intro-section p {
+  font-size: 1.2rem;
+  color: #284e95;
+}
+
+/* Content section */
+.content-section {
+  width: 100%;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background: #fff;
+}
+
+/* Book section */
+.book-section {
+  padding: 30px;
+  margin-bottom: 40px; /* Added margin to prevent overlap */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.374);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url('images/bg1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.book-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.book-content {
+  background-color: #ffdfcd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.book-content img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.book-details h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.book-details p {
+  font-size: 1rem;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Mental model section */
+.mental-model-section {
+  padding-top: 40px; /* Adjusted padding to ensure proper spacing */
+  padding: 80px 30px 0px 30px;
+  border-radius: 10px;
+}
+
+.mental-model-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.mental-model-content {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.mental-model-article {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 310px;
+  text-align: center;
+}
+
+.mental-model-article img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.mental-model-details h3 {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.mental-model-details p {
+  font-size: 1rem;
+  color: #666;
+  margin: 5px 0;
+}

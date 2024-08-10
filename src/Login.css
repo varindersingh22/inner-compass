@@ -1,0 +1,65 @@
+.hero-section {
+    background-image: url("images/Loginbg.png");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display:flex;
+}
+
+.login-main {
+    background-color:#ffffffa8;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 45px 50px;
+    width: 500px;
+    text-align: center;
+    margin: auto;
+}
+ 
+.login-main h1,.login-main h3,.login-main p {
+    color: #000000;
+    margin-bottom:20px;
+}
+
+.login-main h1{
+    font-size: 30px!important;
+}
+
+ 
+.login-lables {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #000000;
+    font-weight: bold;
+    font-size:20px;
+}
+ 
+ 
+.login-input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+ 
+button.submit-btn {
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    color: white!important;
+    cursor: pointer;
+    background-color: #284e95!important;
+    width: 100%;
+    font-size: 16px;
+}
+

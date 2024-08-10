@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Login.css";
 
 const Login = () => {
   const [logConf, setLogConf] = useState(false);
@@ -35,7 +36,7 @@ const Login = () => {
           localStorage.setItem("userID", message.user.id);
           localStorage.setItem("userName", message.user.username);
 
-          navigate("/"); // Use navigate to redirect
+          navigate("/dashboard"); // Use navigate to redirect
         }
       })
       .catch((err) => {
@@ -45,45 +46,26 @@ const Login = () => {
 
   return (
     <>
-      <div className="login-title">
-        <h4>Log In</h4>
-      </div>
-      <div className="login-form mt-4">
-        <form>
-          <div className="form-row">
-            <div className="form-group col-md-12">
-              <input
-                type="name"
-                onKeyUp={(event) => readValue(event, "username")}
-                className="form-control"
-                placeholder="Username"
-              />
-            </div>
-            <div className="form-group col-md-12">
-              <input
-                type="password"
+      <div class="hero-section">
+                <div class="login-main">
+                    <h1>Login</h1>
+                    <h3>Enter your login credentials</h3>
+                    <form>
+                        <label for="first" class="login-lables"> Username: </label>
+                        <input class="login-input" type="name" onKeyUp={(event) => readValue(event, "username")}
+                placeholder="Username"/>
+             
+                        <label for="password" class="login-lables"> Password:</label>
+                        <input class="login-input" type="password"
                 onKeyUp={(event) => readValue(event, "password")}
-                className="form-control"
-                placeholder="Password"
-              />
-            </div>
-          </div>
-          <div className="form-row">
-            <div className="form-group">
-              <div className="form-check"></div>
-            </div>
-          </div>
-          <div className="form-row">
-            <button
-              type="button"
-              className="btn btn-danger btn-block"
-              onClick={loginUser}
-            >
-              Login
-            </button>
-          </div>
-        </form>
-      </div>
+                placeholder="Password"/>
+            
+                        <button type="button" class="submit-btn" onClick={loginUser} >Login</button>
+                    </form>
+
+                    <p class="signup-link">Not registered yet? <a href="/register">Create an account</a></p>
+                </div>
+        </div>
     </>
   );
 };
