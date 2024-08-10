@@ -9,14 +9,14 @@ function Dashboard() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const fetchData = async (query) => {
+  const fetchData = async () => {
     setIsLoading(true);
     setError(null);
 
     try {
       const response = await axios.post(
         'https://varindersingh.pythonanywhere.com/books/helpview/',
-        { query },
+        { user_input: input }, // using input from the form as user_input
         {
           headers: {
             "Content-Type": "application/json",
@@ -24,7 +24,7 @@ function Dashboard() {
         }
       );
 
-      // Update books and mental models based on API response
+      // Update state with books and mental models data from API response
       setBooks(response.data.books || []);
       setMentalModels(response.data.mental_model ? [response.data.mental_model] : []);
     } catch (error) {
@@ -39,10 +39,10 @@ function Dashboard() {
   };
 
   const handleFetchData = () => {
-    if (!input.trim()) return; // Don't fetch data if input is empty
+    if (!input.trim()) return; // Prevent fetching if input is empty
 
-    fetchData(input);
-    setInput(""); // Clear input field
+    fetchData();
+    setInput(""); // Clear the input field after fetching data
   };
 
   return (
