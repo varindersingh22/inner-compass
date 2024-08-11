@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import './chatt.css';
 
@@ -19,14 +18,11 @@ const Chat = () => {
   const [input, setInput] = useState("");
   const [csrfToken, setCsrfToken] = useState("");
 
-  const navigate = useNavigate();
-
   useEffect(() => {
     const getCsrfToken = async () => {
       try {
         const token = await fetchCsrfToken();
         setCsrfToken(token);
-        console.log("Fetched CSRF token:", token); // Debugging line
       } catch (error) {
         console.log("Error fetching CSRF token:", error);
       }
@@ -55,9 +51,22 @@ const Chat = () => {
       }
     })
     .then((response) => {
-      console.log("API response:", response.data); // Debugging line
+      // Process response to format as HTML
+      const formattedResponse = response.data.response[0]
+        .split('\n')
+        .map(line => line.startsWith('• ') ? `<li>${line.slice(2)}</li>` : `<p>${line}</p>`)
+        .join('\n')
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // Convert **bold** to <strong>
+        .replace(/\*(.*?)\*/g, '<em>$1</em>') // Convert *italic* to <em>
+        .replace(/•\s+/g, '<li>') // Convert bullet points to list items
+        .replace(/<\/li>\s*<\/li>/g, '</li>\n<li>') // Handle multiple list items in a row
+        .replace(/\n/g, '</li>\n')
+        .concat('</li>') // Close the last list item
+        .replace(/<\/li>\s*<\/p>/g, '</li><p>') // Handle list items followed by paragraphs
+        .concat('</p>');;
+
       // Add the bot's response to the chat
-      const botMessage = { text: response.data.response[0], type: "bot" };
+      const botMessage = { text: formattedResponse, type: "bot" };
       setMessages(prevMessages => [...prevMessages, botMessage]);
       setInput(""); // Clear input field
     })
@@ -66,23 +75,34 @@ const Chat = () => {
     });
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault(); // Prevent form submission or other default behavior
+      handleSendMessage(); // Call send message function
+    }
+  };
+
   return (
-    <div className="chat-container">
-      <div className="chat-messages">
-        {messages.map((msg, index) => (
-          <div key={index} className={`chat-message ${msg.type}`}>
-            {msg.text}
-          </div>
-        ))}
-      </div>
-      <div className="chat-input">
-        <input
-          type="text"
-          value={input}
-          onChange={handleInputChange}
-          placeholder="Type a message..."
-        />
-        <button onClick={handleSendMessage}>Send</button>
+    <div className="chatbg">
+      <div className="chat-container">
+        <div className="chat-messages">
+          {messages.map((msg, index) => (
+            <div key={index} className={`chat-message ${msg.type}`}>
+              {/* Render HTML content safely */}
+              <div dangerouslySetInnerHTML={{ __html: msg.text }} />
+            </div>
+          ))}
+        </div>
+        <div className="chat-input">
+          <input
+            type="text"
+            value={input}
+            onChange={handleInputChange}
+            onKeyDown={handleKeyDown}
+            placeholder="Type a message..."
+          />
+          <button onClick={handleSendMessage}>Send</button>
+        </div>
       </div>
     </div>
   );

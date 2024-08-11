@@ -1,14 +1,15 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Navbar from "./Navbar2";
+import Footer from "./footer";
 
-function Master2() {
+function Master() {
   return (
     <>
-      <Navbar />
       <Outlet />
+      <Footer/>
+
     </>
   );
 }
 
-export default Master2;
+export default Master;

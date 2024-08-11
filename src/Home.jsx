@@ -43,8 +43,8 @@ function Home() {
     <div className="dashboard-container">
       <div className="section1">
         <div className="intro-section dashboard-row">
-          <h1>Welcome to Your Dashboard</h1>
-          <p>Find peace and improve your habits with our curated content.</p>
+          <h1>Transform Your Life with InnerCompass</h1>
+          <p>Explore self-help books and mental models designed for your personal growth.</p>
         </div>
       </div>
 
@@ -54,7 +54,7 @@ function Home() {
           <div className="mental-model-content">
             {booksData.map((book, index) => (
               <div key={index} className="mental-model-article">
-                <img src="images/Trio-2.svg" alt={`Book ${index + 1}`} />
+                <img src={`/images/book${index + 1}.png`} alt={`Book ${index + 1}`} className="book-image" />
                 <div className="mental-model-details">
                   <h3>{book['Book Title']}</h3>
                   <p><a href={book['Amazon Link']} target="_blank" rel="noopener noreferrer">Buy on Amazon</a></p>
@@ -75,7 +75,7 @@ function Home() {
         {mentalModelData && (
           <div className="content-section dashboard-row-mental">
             <div className="book-section">
-              <h2>Mental Models</h2>
+              <h2>Today's Mental Model</h2>
               <div className="book-content">
                 <img src="images/Trio-1.svg" alt="Mental Model Cover" />
                 <div className="book-details">

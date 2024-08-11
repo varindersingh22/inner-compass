@@ -21,7 +21,10 @@ function Navbar() {
   return (
     <nav className={`navbar ${navBackground}`}>
       <div className="section">
-        <div className="navbar-title">My Website</div>
+      <Link className="navbar-title-link" to={'/dashboard'}>
+            <img src="images/cardinal-points.png" alt="Logo" className="navbar-logo" />
+            Innercompass
+          </Link>
         <div className="navbar-buttons">
           <button className="login-button"><Link to={'/login'}>Login</Link></button>
         </div>

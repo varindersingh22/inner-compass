@@ -1,33 +1,40 @@
+/* Hero Section */
 .hero-section {
     background-image: url("images/Loginbg.png");
     background-color: #cccccc;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100vh;
-    display:flex;
+    min-height: 100vh; /* Ensure it covers the viewport height */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
 }
 
+/* Login Main */
 .login-main {
-    background-color:#ffffffa8;
+    background-color: #ffffffa8;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    padding: 45px 50px;
-    width: 500px;
+    padding: 45px;
+    width: 90%;
+    max-width: 500px; /* Limit the width to 500px */
     text-align: center;
-    margin: auto;
 }
- 
-.login-main h1,.login-main h3,.login-main p {
+
+/* Heading and Text */
+.login-main h1,
+.login-main h3,
+.login-main p {
     color: #000000;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
-.login-main h1{
-    font-size: 30px!important;
+.login-main h1 {
+    font-size: 2rem; /* Use rem units for scalability */
 }
 
- 
+/* Labels */
 .login-lables {
     display: block;
     width: 100%;
@@ -36,10 +43,10 @@
     text-align: left;
     color: #000000;
     font-weight: bold;
-    font-size:20px;
+    font-size: 1.25rem; /* Adjusted font size */
 }
- 
- 
+
+/* Input Fields */
 .login-input {
     display: block;
     width: 100%;
@@ -49,17 +56,70 @@
     border: 1px solid #fff;
     border-radius: 5px;
 }
- 
+
+/* Submit Button */
 button.submit-btn {
     padding: 15px;
     border-radius: 10px;
     margin-top: 15px;
     margin-bottom: 15px;
     border: none;
-    color: white!important;
+    color: white;
     cursor: pointer;
-    background-color: #284e95!important;
+    background-color: #284e95;
     width: 100%;
-    font-size: 16px;
+    font-size: 1rem; /* Use rem units for scalability */
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-main {
+        padding: 30px;
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .login-main h1 {
+        font-size: 1.75rem; /* Adjusted font size */
+    }
+
+    .login-lables {
+        font-size: 1.125rem; /* Adjusted font size */
+    }
+
+    .login-input {
+        padding: 8px;
+    }
+
+    button.submit-btn {
+        padding: 12px;
+        font-size: 0.875rem; /* Adjusted font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .login-main {
+        padding: 20px;
+        width: 85%; /* Adjust width for very small screens */
+    }
+
+    .hero-section {
+        width: 92%;
+    }
+
+    .login-main h1 {
+        font-size: 1.5rem; /* Adjusted font size */
+    }
+
+    .login-lables {
+        font-size: 1rem; /* Adjusted font size */
+    }
+
+    .login-input {
+        padding: 6px;
+    }
+
+    button.submit-btn {
+        padding: 10px;
+        font-size: 0.75rem; /* Adjusted font size */
+    }
+}
