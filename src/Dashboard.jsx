@@ -42,7 +42,7 @@ function Dashboard() {
     if (!input.trim()) return; // Prevent fetching if input is empty
 
     fetchData();
-    setInput(""); // Clear the input field after fetching data
+    setInput(""); 
   };
 
   return (
