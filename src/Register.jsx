@@ -57,8 +57,7 @@ const Register = () => {
                       <label for="email" class="login-lables"> Email:</label>
                         <input class="login-input" type="email"
                 onKeyUp={(event) => readValue(event, "email")}
-                placeholder="Email"
-/>
+                placeholder="Email" />
             
                         <button type="button" class="submit-btn" onClick={registerUser} >Login</button>
                     </form>
