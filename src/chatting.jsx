@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import './chatt.css';
+import homebg from '../public/images/homebg.jpg';
 
 // Component to fetch CSRF token
 const fetchCsrfToken = async () => {
@@ -83,7 +84,12 @@ const Chat = () => {
   };
 
   return (
-    <div className="chatbg">
+    <div className="chatbg" style={{
+      backgroundImage: `url(${homebg})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center center',
+      backgroundSize: 'cover',
+    }}>
       <div className="chat-container">
         <div className="chat-messages">
           {messages.map((msg, index) => (

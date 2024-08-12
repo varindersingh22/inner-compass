@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './Home.css';
 import homebg from '../public/images/homebg.jpg';
+import bg1 from '../public/images/bg1.png';
 
 function Dashboard() {
   const [input, setInput] = useState("");
@@ -94,7 +95,12 @@ function Dashboard() {
         </div>
 
         <div className="content-section dashboard-row-mental">
-          <div className="book-section">
+          <div className="book-section" style={{
+        backgroundImage: `url(${bg1})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center center',
+        backgroundSize: 'cover',
+      }}>
             <h2>Recommended Mental Models</h2>
             {isLoading ? (
               <div className="loading">Loading...</div>
