@@ -15,7 +15,7 @@ const Register = () => {
   };
 
   const registerUser = () => {
-    fetch("https://varindersingh.pythonanywhere.com/register", {
+    fetch("https://varindersingh.pythonanywhere.com/register/", {
       method: "POST",
       body: JSON.stringify(user),
       headers: {
