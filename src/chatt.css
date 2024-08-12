@@ -58,6 +58,7 @@
     background-color: #dcf8c6;
     align-self: flex-end;
     text-align: left;
+    color:#000;
   }
   
   .chat-message.bot {
@@ -68,8 +69,8 @@
     text-align: left;
   }
 
-  .chat-message.user p, .chat-message.bot{
-    color:#000;
+ .chat-message.bot p{
+    color:#000!important;
   }
 
   .chat-input {
