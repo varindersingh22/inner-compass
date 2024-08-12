@@ -67,7 +67,11 @@
     align-self: flex-start;
     text-align: left;
   }
-  
+
+  .chat-message.user p, .chat-message.bot{
+    color:#000;
+  }
+
   .chat-input {
     display: flex;
     padding: 10px;
