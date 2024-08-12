@@ -83,7 +83,7 @@ function Home() {
 
         {mentalModelData && (
           <div className="content-section dashboard-row-mental">
-            <div className="book-section"style={{
+            <div className="book-section" style={{
         backgroundImage: `url(${bg1})`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
