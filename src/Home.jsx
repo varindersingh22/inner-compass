@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
 import homebg from '../public/images/homebg.jpg'; 
+import bg1 from '../public/images/bg1.png'; 
 
 
 function Home() {
@@ -82,7 +83,12 @@ function Home() {
 
         {mentalModelData && (
           <div className="content-section dashboard-row-mental">
-            <div className="book-section">
+            <div className="book-section"style={{
+        backgroundImage: `url(${bg1})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center center',
+        backgroundSize: 'cover',
+      }}>
               <h2>Today's Mental Model</h2>
               <div className="book-content">
                 <img src="images/Trio-1.svg" alt="Mental Model Cover" />

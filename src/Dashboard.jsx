@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Home.css';
+import homebg from '../public/images/homebg.jpg';
 
 function Dashboard() {
   const [input, setInput] = useState("");
@@ -47,7 +48,12 @@ function Dashboard() {
 
   return (
     <div className="dashboard-container">
-      <div className="section1">
+      <div className="section1" style={{
+        backgroundImage: `url(${homebg})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center center',
+        backgroundSize: 'cover',
+      }}>
         <div className="intro-section dashboard-row">
           <h1>Welcome to the Dashboard</h1>
           <h3 style={{color: '#284e95'}}>Get Personalized Suggestions</h3>
