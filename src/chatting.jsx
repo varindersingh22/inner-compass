@@ -45,7 +45,7 @@ const Chat = () => {
     setMessages(prevMessages => [...prevMessages, newMessage]);
 
     // Send the message to the API
-    axios.post("https://varindersingh.pythonanywhere.com/chat/chatbot", { message: input }, {
+    axios.post("https://varindersingh.pythonanywhere.com/chat/chatbot/", { message: input }, {
       headers: {
         "Content-Type": "application/json",
         "X-CSRFToken": csrfToken, // Include CSRF token in headers
