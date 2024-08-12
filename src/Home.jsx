@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
+import homebg from '/home/user/inner-compass/public/images/homebg.jpg'; 
+
 
 function Home() {
   const [mentalModelData, setMentalModelData] = useState(null);
@@ -41,7 +43,13 @@ function Home() {
 
   return (
     <div className="dashboard-container">
-      <div className="section1">
+      <div className="section1"
+      style={{
+        backgroundImage: `url(${homebg})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center center',
+        backgroundSize: 'cover',
+      }}>
         <div className="intro-section dashboard-row">
           <h1>Transform Your Life with InnerCompass</h1>
           <p>Explore self-help books and mental models designed for your personal growth.</p>
