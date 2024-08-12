@@ -25,7 +25,7 @@ function App() {
            </Route>
       
             <Route path="/" element={<Master3/>}>
-            <Route path='/dashboard' element={<Dashboard/>} />'
+            <Route path='/dashboard' element={<Dashboard/>} />
            <Route path="/chat" element={<Chat/>} />
             </Route>
 

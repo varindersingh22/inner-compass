@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
-import loginbg from '../public/images/Loginbg.png'; 
+import loginbg from '../public/images/Loginbg.png';
+import { Link } from "react-router-dom"; 
 
 const Login = () => {
   const [logConf, setLogConf] = useState(false);
@@ -69,7 +70,7 @@ const Login = () => {
                         <button type="button" class="submit-btn" onClick={loginUser} >Login</button>
                     </form>
 
-                    <p class="signup-link">Not registered yet? <a href="/register">Create an account</a></p>
+                    <p class="signup-link">Not registered yet? <Link to="/register">Create an account</Link></p>
                 </div>
         </div>
     </>
