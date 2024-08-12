@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
+import loginbg from '../public/images/Loginbg.png'; 
 
 const Login = () => {
   const [logConf, setLogConf] = useState(false);
@@ -46,7 +47,12 @@ const Login = () => {
 
   return (
     <>
-      <div class="hero-section">
+      <div class="hero-section" style={{
+        backgroundImage: `url(${loginbg})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center center',
+        backgroundSize: 'cover',
+      }}>
                 <div class="login-main">
                     <h1>Login</h1>
                     <h3>Enter your login credentials</h3>

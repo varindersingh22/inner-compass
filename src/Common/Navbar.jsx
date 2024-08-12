@@ -21,7 +21,7 @@ function Navbar() {
   return (
     <nav className={`navbar ${navBackground}`}>
       <div className="section">
-      <Link className="navbar-title-link" to={'/dashboard'}>
+      <Link className="navbar-title-link" to={'/'}>
             <img src="images/cardinal-points.png" alt="Logo" className="navbar-logo" />
             Innercompass
           </Link>
