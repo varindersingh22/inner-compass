@@ -131,6 +131,15 @@
   top: 8px;
 }
 
+.navbar.solid .hamburger,
+.navbar.solid .hamburger::before,
+.navbar.solid .hamburger::after {
+  background-color: #284e95;
+}
+
+.navbar-links.open .nav-link{
+  color: #fff;
+}
 
 @media (max-width: 768px) {
   .navbar-links {
