@@ -102,9 +102,7 @@ button.submit-btn {
         width: 85%; /* Adjust width for very small screens */
     }
 
-    .hero-section {
-        width: 92%;
-    }
+   
 
     .login-main h1 {
         font-size: 1.5rem; /* Adjusted font size */
