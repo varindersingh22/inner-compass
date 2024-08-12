@@ -20,7 +20,7 @@ const Login = () => {
   };
 
   const loginUser = () => {
-    fetch("https://varindersingh.pythonanywhere.com/login/", {
+    fetch("https://varindersingh.pythonanywhere.com/login", {
       method: "POST",
       body: JSON.stringify(user),
       headers: {

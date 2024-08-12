@@ -17,7 +17,7 @@ function Dashboard() {
 
     try {
       const response = await axios.post(
-        'https://varindersingh.pythonanywhere.com/books/helpview/',
+        'https://varindersingh.pythonanywhere.com/books/helpview',
         { user_input: input }, // using input from the form as user_input
         {
           headers: {
