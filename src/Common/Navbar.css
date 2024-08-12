@@ -29,6 +29,10 @@
   font-weight: bold;
 }
 
+.navbar-title-link:hover{
+  color: #284e95;
+}
+
 .navbar-logo {
   width: 40px;
   height: 40px;
@@ -38,7 +42,7 @@
 .navbar-links {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -52,10 +56,23 @@
   font-size: 1.2rem;
 }
 
+.nav-link:hover{
+  color:#284e95;
+}
+
 .navbar.solid .nav-link,
 .navbar.solid .navbar-title-link {
   color: #284e95;
 }
+
+.navbar.transparent {
+  background-color: transparent;
+}
+
+.navbar.solid {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
 
 .login-button {
   padding: 8px 16px;
@@ -70,6 +87,10 @@
   color: #fff;
   font-weight: bold;
   text-decoration: none;
+}
+
+.login-button a:hover{
+  color:#fff;
 }
 
 .menu-toggle {
