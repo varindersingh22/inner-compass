@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const [user, setUser] = useState({});
@@ -62,7 +63,7 @@ const Register = () => {
                         <button type="button" class="submit-btn" onClick={registerUser} >Login</button>
                     </form>
 
-                    <p class="signup-link">already registered ? <a href="/login">Login to an account</a></p>
+                    <p class="signup-link">already registered ? <Link to="/login">Login to an account</Link></p>
                 </div>
         </div>
     </>
