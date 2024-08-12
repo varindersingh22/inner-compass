@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
-import homebg from '/home/user/inner-compass/public/images/homebg.jpg'; 
+import homebg from '../public/images/homebg.jpg'; 
 
 
 function Home() {
